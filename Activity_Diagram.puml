@@ -1,0 +1,32 @@
+@startuml
+
+start
+:Load main page;
+:Enter email;
+if(Email already exists in database) then (no)
+    :Insert email into database;
+else(yes)
+endif
+
+if(Email has no todo's associated) then (no)
+    :Ask user to start creating todo's;
+    :User creates todo;
+else(yes)
+    if(User has currently active todo's) then (yes)
+    else (no)
+    :Tell user he is up to date on everything;
+    :Ask user to create more goals;
+    endif
+endif
+    :Display all todo's;
+
+:User can open detailed views of todo's or create more;
+
+if(What does the user want to do with the opened todo?) then (wants to edit it)
+    :Edit given todo;
+    else(user presses delete)
+    :Delete given todo;
+    endif
+stop
+
+@enduml
