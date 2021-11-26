@@ -1,0 +1,20 @@
+@startuml
+
+actor   User
+User -> Todo: Authentication Request
+database    Database    as database
+Todo -> database: Check Email
+database --> Todo: Response Email
+Todo --> User: Log in
+
+User -> Todo: View Todo List
+Todo -> database: Select Table
+database --> Todo: Response Table
+Todo --> User: Show Todo List
+
+User -> Todo: CRUD Methods
+Todo -> database: CRUD Methods Request
+database --> Todo: CRUD Methods Response
+Todo --> User: Do CRUD Methods
+
+@enduml
