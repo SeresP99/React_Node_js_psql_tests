@@ -1,0 +1,42 @@
+@startuml
+
+[*] --> Idle
+Idle: ready for email input
+state AccountSetup {
+Idle -> Fetching
+Fetching: fetch email
+Fetching: check if email exists
+Fetching --> Create
+Create: add email account to database if it doesn't exist
+}
+
+state LoadAccount {
+LoadTodos: Load todo's if they exist
+LoadTodos --> ListLoadedTodos
+Create -> LoadTodos
+}
+
+state MainFunctionality {
+
+ListLoadedTodos -> IdleForTodoInput
+IdleForTodoInput: waiting for input regarding todos
+
+IdleForTodoInput --> Add : add new todo
+Add: change name/description
+
+IdleForTodoInput --> Edit : edit todo
+Edit: change name/description
+
+IdleForTodoInput --> Delete : delete todo
+Delete: remove todo completely
+
+Add --> BackToList
+Edit --> BackToList
+Delete --> BackToList
+
+BackToList -> IdleForTodoInput
+}
+BackToList -> LogOut
+LogOut -->[*]
+
+@enduml
