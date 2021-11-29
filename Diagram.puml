@@ -1,0 +1,18 @@
+@startuml
+(*) --> "Input email"
+
+if "User has email in database" then
+  -->[true] "jump to list of todo's page"
+  --> "Open todo list"
+else
+  ->[false] "Create database table for email"
+   --> "Open todo list"
+endif
+if "User has todo items" then
+  ->[true] "show existing todo's"
+  --> "allow adding, editing, ticking and deleting todo's"
+else
+  -->[false] "show: Start creating a goal list now!"
+  -->"allow adding first todo"
+-->[Ending process] (*)
+@enduml

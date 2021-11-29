@@ -1,0 +1,21 @@
+@startuml
+left to right direction
+actor User as u
+actor Admin as admin
+package Todo{
+    usecase (Add Email) as uc1
+    usecase (Review) as uc2 
+    usecase (Add Todoes) as uc3
+    usecase (Manage Todoes) as uc4
+    usecase (Delete Todoes) as uc5
+}
+usecase (Database Management) as uc6
+u --> uc1
+u --> uc2
+u --> uc3
+u --> uc4
+u --> uc5
+admin --> uc6
+admin --> uc2
+admin --> uc5
+@enduml
