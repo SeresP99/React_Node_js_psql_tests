@@ -11,6 +11,23 @@ app.use(express.json());
 
 //create all todo
 
+app.post("/login", async (req, res) => {
+    console.log("request came in");
+    try{
+        const email = req.body.email;
+        console.log("email:" + email);
+        const emailId = await pool.query("SELECT * FROM emails WHERE email_address = $1", [email])
+        if (emailId === undefined)
+        console.log(emailId.rows[0].email_id);
+        console.log(emailId.rows[0]);
+        res.end("success");
+    }
+    catch (e) {
+        console.error(e.message);
+        res.end("Something went wrong")
+    }
+});
+
 app.post("/todos", async(req, res) => {
     //await
     try {
