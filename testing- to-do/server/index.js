@@ -32,8 +32,6 @@ app.post("/login", async (req, res) => {
             const todos = await pool.query("SELECT * FROM todo WHERE user_id = $1",  [emailId.rows[0].email_id]);
             res.send(todos.rows[0]);
         }
-
-        res.end("algorithm done")
     }
     catch (e) {
         console.error(e.message);
