@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="44B00A63-8DCA-DC03-1C3C-663669048E38">
+<Attribute name="todo_id" id="44B00A63-8DCA-DC03-1C3C-663669048E38">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:13:57 UTC</createdTime>
 <ownerDesignName>logical</ownerDesignName>
@@ -25,10 +25,10 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT033</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Id1" id="7061FF5D-DDE5-9A78-B994-4304681D6D7E">
+<Attribute name="user_id" id="7061FF5D-DDE5-9A78-B994-4304681D6D7E">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:29:05 UTC</createdTime>
 <generatorID>47C9A4C1-06B7-23DE-D15D-A33E2DE7FDBB</generatorID>
@@ -42,7 +42,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Todo" id="4E04968F-DBBA-A63C-B5BB-F573A4E9578F">
+<Attribute name="todo_text" id="4E04968F-DBBA-A63C-B5BB-F573A4E9578F">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:29:51 UTC</createdTime>
 <ownerDesignName>logical</ownerDesignName>

@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Id" id="3BE95BBC-22E9-FFD2-B6D0-AF2D278ED320">
+<Column name="user_id" id="3BE95BBC-22E9-FFD2-B6D0-AF2D278ED320">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:31:17 UTC</createdTime>
 <generatorID>BA549F18-5E03-0E27-4A0B-B56C3279044E</generatorID>
@@ -19,7 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="Email" id="3BBAF389-88DD-CE30-C253-BC27694D7063">
+<Column name="user_email" id="3BBAF389-88DD-CE30-C253-BC27694D7063">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:31:17 UTC</createdTime>
 <generatorID>A0F5FFED-5626-9F83-A74C-40482F037EB8</generatorID>

@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="Id" id="DD85C4C6-C88E-A73D-F429-A72F24168990">
+<Column name="todo_id" id="DD85C4C6-C88E-A73D-F429-A72F24168990">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:31:17 UTC</createdTime>
 <generatorID>44B00A63-8DCA-DC03-1C3C-663669048E38</generatorID>
@@ -16,7 +16,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT033</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
@@ -35,7 +35,7 @@
 <colAssociation fkAssociation="481D6B0C-C763-7DFA-9B68-0C06475E1C00" referredColumn="3BE95BBC-22E9-FFD2-B6D0-AF2D278ED320"/>
 </associations>
 </Column>
-<Column name="Todo" id="A53F70A1-B9D5-5317-1B0B-48864D05DE2C">
+<Column name="todo_text" id="A53F70A1-B9D5-5317-1B0B-48864D05DE2C">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:31:17 UTC</createdTime>
 <generatorID>4E04968F-DBBA-A63C-B5BB-F573A4E9578F</generatorID>
