@@ -2,20 +2,18 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
+const {readFile} = require("fs").promises;
 
 //middleware
 app.use(cors());
 app.use(express.json());
 
 //ROUTES//
-
+app.get('/', async (req, res) => {
+    console.log("Opening login page for a user.");
+    res.end(await readFile("./views/login.html", "utf-8"));
+});
 //create all todo
-
-app.get("/data", async (req, res) => {
-    const data = await pool.query("SELECT * FROM users");
-    res.send(data);
-})
-
 app.post("/login", async (req, res) => {
     console.log("request came in");
     try{
