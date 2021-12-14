@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Id" id="BA549F18-5E03-0E27-4A0B-B56C3279044E">
+<Attribute name="user_id" id="BA549F18-5E03-0E27-4A0B-B56C3279044E">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:12:24 UTC</createdTime>
 <ownerDesignName>logical</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="Email" id="A0F5FFED-5626-9F83-A74C-40482F037EB8">
+<Attribute name="user_email" id="A0F5FFED-5626-9F83-A74C-40482F037EB8">
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:13:05 UTC</createdTime>
 <ownerDesignName>logical</ownerDesignName>
@@ -47,8 +47,9 @@
 <createdBy>Geri</createdBy>
 <createdTime>2021-12-12 16:13:03 UTC</createdTime>
 <ownerDesignName>logical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B2736FDE-F432-76E6-FDD8-FC07070267FF" value="true"/>
+<item key="B2736FDE-F432-76E6-FDD8-FC07070267FF" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
