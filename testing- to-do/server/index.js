@@ -22,15 +22,16 @@ app.post("/login", async (req, res) => {
         const email = req.body.email;
         console.log("email:" + email);
         const emailId = await pool.query("SELECT * FROM users WHERE user_email = $1", [email])
-        console.log(emailId);
         if (emailId.rows.length === 0) {
-            const insertEmail = await pool.query("INSERT INTO users(user_id, user_email) VALUES (1, $1) RETURNING *", [email]);
+            console.log(emailId);
+            const insertEmail = await pool.query("INSERT INTO users(user_email) VALUES ($1) RETURNING *", [email]);
             console.log(insertEmail);
-            res.send("email created");
+            res.end("email created");
         }
         else{
+            console.log("email already exists")
             const todos = await pool.query("SELECT * FROM todo WHERE user_id = $1",  [emailId.rows[0].email_id]);
-            res.send(todos.rows[0]);
+            res.end(todos.rows.toString);
         }
     }
     catch (e) {
