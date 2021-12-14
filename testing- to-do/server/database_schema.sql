@@ -1,27 +1,26 @@
--- we don't know how to generate root <with-no-name> (class Root) :(
-create table "user"
+create table if not exists users
 (
-	user_id integer not null
-		constraint user_pk
-			primary key,
-	user_email varchar
+    user_id serial
+        constraint users_pk
+            primary key,
+    user_email varchar
 );
 
-alter table "user" owner to postgres;
+alter table users owner to postgres;
 
-create table todo
+create unique index if not exists users_user_email_uindex
+    on users (user_email);
+
+create table if not exists todo
 (
-	todo_id serial
-		constraint todo_pk
-			primary key,
-	todo_text varchar not null,
-	user_id integer
-		constraint todo_user_user_id_fk
-			references "user"
+    todo_id serial
+        constraint todo_pk
+            primary key,
+    todo_text varchar not null,
+    user_id integer
+        constraint todo_user_user_id_fk
+            references users
 );
 
 alter table todo owner to postgres;
-
-create unique index user_user_email_uindex
-	on "user" (user_email);
 
