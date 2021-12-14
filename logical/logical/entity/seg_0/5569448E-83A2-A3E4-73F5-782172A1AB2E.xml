@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5569448E-83A2-A3E4-73F5-782172A1AB2E" name="User">
+<createdBy>Geri</createdBy>
+<createdTime>2021-12-12 16:11:58 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B2736FDE-F432-76E6-FDD8-FC07070267FF" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id" id="BA549F18-5E03-0E27-4A0B-B56C3279044E">
+<createdBy>Geri</createdBy>
+<createdTime>2021-12-12 16:12:24 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B2736FDE-F432-76E6-FDD8-FC07070267FF" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Email" id="A0F5FFED-5626-9F83-A74C-40482F037EB8">
+<createdBy>Geri</createdBy>
+<createdTime>2021-12-12 16:13:05 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B2736FDE-F432-76E6-FDD8-FC07070267FF" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C089D8F9-4F05-70E2-DDA6-68A4911927FB" name="User PK">
+<createdBy>Geri</createdBy>
+<createdTime>2021-12-12 16:13:03 UTC</createdTime>
+<ownerDesignName>logical</ownerDesignName>
+<engineerTo>
+<item key="B2736FDE-F432-76E6-FDD8-FC07070267FF" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>BA549F18-5E03-0E27-4A0B-B56C3279044E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
