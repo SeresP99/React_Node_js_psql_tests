@@ -40,16 +40,22 @@ app.post("/login", async (req, res) => {
     }
 });
 
-app.post("/todos", async(req, res) => {
+app.post("/createTodo", async(req, res) => {
     //await
     try {
         
-        const {description} = req.body;
-        const newTodo = await pool.query("INSERT INTO todo (description) VALUES($1) RETURNING *", 
-        [description]);
-
-        res.json(newTodo.rows[0]);
-
+        const {user_id, todo_text} = req.body;
+        const userId = await pool.query("SELECT * FROM users WHERE user_id = $1", [user_id])
+        if(userId.rows.length === 0){
+            res.end("Something went wrong")
+        }
+        else{
+            const newTodo = await pool.query("INSERT INTO todo (user_id, todo_text) VALUES($1, $2) RETURNING *", 
+            [user_id, todo_text]);
+    
+            res.json(newTodo.rows[0]);
+        }
+        
     } catch (err) {
         console.error(err.message);
     }
@@ -57,10 +63,18 @@ app.post("/todos", async(req, res) => {
 
 //get all todo
 
-app.get("/todos", async(req, res) => {
+app.get("/getAllTodoes", async(req, res) => {
     try {
-        const allTodos = await pool.query("SELECT * FROM todo");
-        res.json(allTodos.rows);
+        const {user_id} = req.body;
+        const userId = await pool.query("SELECT * FROM todo WHERE user_id = $1", [user_id])
+        if(userId.rows.length === 0){
+            res.end("404")
+        }
+        else{
+            const allTodoes = await pool.query("SELECT * FROM todo where user_id = $1", [user_id]);
+            res.json(allTodoes.rows);
+        }
+
     } catch (err) {
         console.error(err.message);
     }
